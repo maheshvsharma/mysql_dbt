@@ -1,0 +1,603 @@
+
+
+============================== 2023-01-05 20:22:34.078900 | 365491f3-7f48-46c7-af8c-ddd259af5e5c ==============================
+20:22:34.078900 [info ] [MainThread]: Running with dbt=1.0.8
+20:22:34.079166 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/root/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, config_dir=False, defer=None, state=None, cls=<class 'dbt.task.debug.DebugTask'>, which='debug', rpc_method=None)
+20:22:34.079285 [debug] [MainThread]: Tracking: tracking
+20:22:34.082806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a9761e730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a9761ee20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a9761e070>]}
+20:22:34.140142 [debug] [MainThread]: Executing "git --help"
+20:22:34.143614 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+20:22:34.143951 [debug] [MainThread]: STDERR: "b''"
+20:22:34.146772 [debug] [MainThread]: Acquiring new mysql connection "debug"
+20:22:34.147154 [debug] [MainThread]: Using mysql connection "debug"
+20:22:34.147254 [debug] [MainThread]: On debug: select 1 as id
+20:22:34.147340 [debug] [MainThread]: Opening a new connection, currently in state init
+20:22:34.623976 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.48 seconds
+20:22:34.625257 [debug] [MainThread]: On debug: Close
+20:22:34.625754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a96ab73a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a97601940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a97601880>]}
+20:22:34.649204 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2023-01-05 20:22:41.407023 | 02802d15-8bff-400b-8f34-29f705968c76 ==============================
+20:22:41.407023 [info ] [MainThread]: Running with dbt=1.0.8
+20:22:41.407420 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/root/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+20:22:41.407566 [debug] [MainThread]: Tracking: tracking
+20:22:41.410648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc5d7ff40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc5d7f760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc5d7fe80>]}
+20:22:41.420907 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+20:22:41.421117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '02802d15-8bff-400b-8f34-29f705968c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc5d51430>]}
+20:22:41.429893 [debug] [MainThread]: Parsing macros/catalog.sql
+20:22:41.432375 [debug] [MainThread]: Parsing macros/adapters.sql
+20:22:41.440425 [debug] [MainThread]: Parsing macros/materializations/incremental/helpers.sql
+20:22:41.442503 [debug] [MainThread]: Parsing macros/materializations/incremental/incremental.sql
+20:22:41.448603 [debug] [MainThread]: Parsing macros/materializations/snapshot/snapshot_merge.sql
+20:22:41.450533 [debug] [MainThread]: Parsing macros/materializations/snapshot/snapshot.sql
+20:22:41.466570 [debug] [MainThread]: Parsing macros/materializations/snapshot/strategies.sql
+20:22:41.467332 [debug] [MainThread]: Parsing macros/materializations/test/test.sql
+20:22:41.468595 [debug] [MainThread]: Parsing macros/materializations/seed/seed.sql
+20:22:41.472054 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+20:22:41.473452 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+20:22:41.474889 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+20:22:41.477164 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+20:22:41.481219 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+20:22:41.490039 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+20:22:41.499210 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+20:22:41.505817 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+20:22:41.508521 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+20:22:41.510560 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+20:22:41.513185 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+20:22:41.513827 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+20:22:41.514321 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+20:22:41.515611 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+20:22:41.516457 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+20:22:41.524259 [debug] [MainThread]: Parsing macros/etc/statement.sql
+20:22:41.528326 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+20:22:41.531901 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+20:22:41.534061 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+20:22:41.539687 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+20:22:41.555057 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+20:22:41.557715 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+20:22:41.564573 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+20:22:41.567031 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+20:22:41.569166 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+20:22:41.575586 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+20:22:41.576825 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+20:22:41.580927 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+20:22:41.591771 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+20:22:41.593184 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+20:22:41.607656 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+20:22:41.616981 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+20:22:41.618643 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+20:22:41.620265 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+20:22:41.624341 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+20:22:41.625864 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+20:22:41.636640 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+20:22:41.647025 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+20:22:41.662569 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+20:22:41.868223 [debug] [MainThread]: 1699: static parser successfully parsed example/englishcountry.sql
+20:22:41.878598 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+20:22:41.880605 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+20:22:41.934715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '02802d15-8bff-400b-8f34-29f705968c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc4c76310>]}
+20:22:41.939605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '02802d15-8bff-400b-8f34-29f705968c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc4c76a30>]}
+20:22:41.939827 [info ] [MainThread]: Found 3 models, 9 tests, 0 snapshots, 0 analyses, 170 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+20:22:41.941042 [info ] [MainThread]: 
+20:22:41.941384 [debug] [MainThread]: Acquiring new mysql connection "master"
+20:22:41.942302 [debug] [ThreadPool]: Acquiring new mysql connection "list_schemas"
+20:22:41.950315 [debug] [ThreadPool]: Using mysql connection "list_schemas"
+20:22:41.950442 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "connection_name": "list_schemas"} */
+select distinct schema_name
+        from information_schema.schemata
+20:22:41.950522 [debug] [ThreadPool]: Opening a new connection, currently in state init
+20:22:42.384299 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.43 seconds
+20:22:42.385721 [debug] [ThreadPool]: On list_schemas: Close
+20:22:42.387005 [debug] [ThreadPool]: Acquiring new mysql connection "list_None_simpliatransformeddb"
+20:22:42.391929 [debug] [ThreadPool]: Using mysql connection "list_None_simpliatransformeddb"
+20:22:42.392058 [debug] [ThreadPool]: On list_None_simpliatransformeddb: BEGIN
+20:22:42.392147 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+20:22:42.831937 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.44 seconds
+20:22:42.832175 [debug] [ThreadPool]: Using mysql connection "list_None_simpliatransformeddb"
+20:22:42.832263 [debug] [ThreadPool]: On list_None_simpliatransformeddb: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "connection_name": "list_None_simpliatransformeddb"} */
+select
+      null as "database",
+      table_name as name,
+      table_schema as "schema",
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+    from information_schema.tables
+    where table_schema = 'simpliatransformeddb'
+  
+20:22:42.929880 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.1 seconds
+20:22:42.931269 [debug] [ThreadPool]: On list_None_simpliatransformeddb: ROLLBACK
+20:22:42.979368 [debug] [ThreadPool]: On list_None_simpliatransformeddb: Close
+20:22:42.980187 [debug] [MainThread]: Using mysql connection "master"
+20:22:42.980344 [debug] [MainThread]: On master: BEGIN
+20:22:42.980425 [debug] [MainThread]: Opening a new connection, currently in state init
+20:22:43.407674 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.43 seconds
+20:22:43.407920 [debug] [MainThread]: On master: COMMIT
+20:22:43.408007 [debug] [MainThread]: Using mysql connection "master"
+20:22:43.408093 [debug] [MainThread]: On master: COMMIT
+20:22:43.502013 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.09 seconds
+20:22:43.502243 [debug] [MainThread]: On master: Close
+20:22:43.502681 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+20:22:43.502891 [info ] [MainThread]: 
+20:22:43.506136 [debug] [Thread-1  ]: Began running node model.mysql_dbt.englishcountry
+20:22:43.506419 [info ] [Thread-1  ]: 1 of 3 START table model simpliatransformeddb.englishcountry.................... [RUN]
+20:22:43.506786 [debug] [Thread-1  ]: Acquiring new mysql connection "model.mysql_dbt.englishcountry"
+20:22:43.506907 [debug] [Thread-1  ]: Began compiling node model.mysql_dbt.englishcountry
+20:22:43.507013 [debug] [Thread-1  ]: Compiling model.mysql_dbt.englishcountry
+20:22:43.509362 [debug] [Thread-1  ]: Writing injected SQL for node "model.mysql_dbt.englishcountry"
+20:22:43.509703 [debug] [Thread-1  ]: finished collecting timing info
+20:22:43.509819 [debug] [Thread-1  ]: Began executing node model.mysql_dbt.englishcountry
+20:22:43.534289 [debug] [Thread-1  ]: Writing runtime SQL for node "model.mysql_dbt.englishcountry"
+20:22:43.534661 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:22:43.534766 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: BEGIN
+20:22:43.534839 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+20:22:43.962992 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.43 seconds
+20:22:43.963222 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:22:43.963306 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.englishcountry"} */
+
+
+  create  table
+    `simpliatransformeddb`.`englishcountry__dbt_tmp`
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+select * from (
+
+    select c.code, c.name, c.region, l.language from simpliatransformeddb.airbyte_country c join simpliatransformeddb.airbyte_countrylanguage l on c.code = l.countrycode 
+    where l.language='English' And l.isOfficial='T'
+
+) as source_data
+
+
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  )
+
+20:22:44.171525 [debug] [Thread-1  ]: SQL status: SUCCESS 44 in 0.21 seconds
+20:22:44.177427 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:22:44.177588 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.englishcountry"} */
+
+    drop table if exists `simpliatransformeddb`.`englishcountry` cascade
+  
+20:22:44.272670 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:22:44.273861 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:22:44.274005 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.englishcountry"} */
+
+    rename table `simpliatransformeddb`.`englishcountry__dbt_tmp` to `simpliatransformeddb`.`englishcountry`
+  
+20:22:44.417949 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.14 seconds
+20:22:44.427562 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: COMMIT
+20:22:44.427716 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:22:44.427794 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: COMMIT
+20:22:44.520972 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:22:44.525294 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:22:44.525436 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.englishcountry"} */
+drop table if exists `simpliatransformeddb`.`englishcountry__dbt_backup`
+20:22:44.620947 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:22:44.622147 [debug] [Thread-1  ]: finished collecting timing info
+20:22:44.622305 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: Close
+20:22:44.622759 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '02802d15-8bff-400b-8f34-29f705968c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc4c15160>]}
+20:22:44.623072 [info ] [Thread-1  ]: 1 of 3 OK created table model simpliatransformeddb.englishcountry............... [[32mSUCCESS 44[0m in 1.12s]
+20:22:44.623306 [debug] [Thread-1  ]: Finished running node model.mysql_dbt.englishcountry
+20:22:44.623451 [debug] [Thread-1  ]: Began running node model.mysql_dbt.my_first_dbt_model
+20:22:44.623864 [info ] [Thread-1  ]: 2 of 3 START table model simpliatransformeddb.my_first_dbt_model................ [RUN]
+20:22:44.624238 [debug] [Thread-1  ]: Acquiring new mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:22:44.624348 [debug] [Thread-1  ]: Began compiling node model.mysql_dbt.my_first_dbt_model
+20:22:44.624447 [debug] [Thread-1  ]: Compiling model.mysql_dbt.my_first_dbt_model
+20:22:44.626673 [debug] [Thread-1  ]: Writing injected SQL for node "model.mysql_dbt.my_first_dbt_model"
+20:22:44.626927 [debug] [Thread-1  ]: finished collecting timing info
+20:22:44.627026 [debug] [Thread-1  ]: Began executing node model.mysql_dbt.my_first_dbt_model
+20:22:44.629132 [debug] [Thread-1  ]: Writing runtime SQL for node "model.mysql_dbt.my_first_dbt_model"
+20:22:44.629380 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:22:44.629472 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: BEGIN
+20:22:44.629543 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+20:22:45.064873 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.44 seconds
+20:22:45.065104 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:22:45.065187 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_first_dbt_model"} */
+
+
+  create  table
+    `simpliatransformeddb`.`my_first_dbt_model__dbt_tmp`
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  )
+
+20:22:45.239240 [debug] [Thread-1  ]: SQL status: SUCCESS 2 in 0.17 seconds
+20:22:45.241478 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:22:45.241636 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_first_dbt_model"} */
+
+    drop table if exists `simpliatransformeddb`.`my_first_dbt_model` cascade
+  
+20:22:45.338044 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:22:45.339172 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:22:45.339307 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_first_dbt_model"} */
+
+    rename table `simpliatransformeddb`.`my_first_dbt_model__dbt_tmp` to `simpliatransformeddb`.`my_first_dbt_model`
+  
+20:22:45.489907 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.15 seconds
+20:22:45.491358 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: COMMIT
+20:22:45.491493 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:22:45.491571 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: COMMIT
+20:22:45.586627 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:22:45.588203 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:22:45.588342 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_first_dbt_model"} */
+drop table if exists `simpliatransformeddb`.`my_first_dbt_model__dbt_backup`
+20:22:45.684893 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:22:45.686279 [debug] [Thread-1  ]: finished collecting timing info
+20:22:45.686441 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: Close
+20:22:45.686891 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '02802d15-8bff-400b-8f34-29f705968c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc43921c0>]}
+20:22:45.687197 [info ] [Thread-1  ]: 2 of 3 OK created table model simpliatransformeddb.my_first_dbt_model........... [[32mSUCCESS 2[0m in 1.06s]
+20:22:45.687414 [debug] [Thread-1  ]: Finished running node model.mysql_dbt.my_first_dbt_model
+20:22:45.687552 [debug] [Thread-1  ]: Began running node model.mysql_dbt.my_second_dbt_model
+20:22:45.687831 [info ] [Thread-1  ]: 3 of 3 START view model simpliatransformeddb.my_second_dbt_model................ [RUN]
+20:22:45.688160 [debug] [Thread-1  ]: Acquiring new mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:22:45.688266 [debug] [Thread-1  ]: Began compiling node model.mysql_dbt.my_second_dbt_model
+20:22:45.688355 [debug] [Thread-1  ]: Compiling model.mysql_dbt.my_second_dbt_model
+20:22:45.690409 [debug] [Thread-1  ]: Writing injected SQL for node "model.mysql_dbt.my_second_dbt_model"
+20:22:45.690662 [debug] [Thread-1  ]: finished collecting timing info
+20:22:45.690760 [debug] [Thread-1  ]: Began executing node model.mysql_dbt.my_second_dbt_model
+20:22:45.705659 [debug] [Thread-1  ]: Writing runtime SQL for node "model.mysql_dbt.my_second_dbt_model"
+20:22:45.705918 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:22:45.706014 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: BEGIN
+20:22:45.706090 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+20:22:46.136670 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.43 seconds
+20:22:46.136947 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:22:46.137041 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_second_dbt_model"} */
+
+  create view `simpliatransformeddb`.`my_second_dbt_model__dbt_tmp` as (
+    -- Use the `ref` function to select from other models
+
+select *
+from `simpliatransformeddb`.`englishcountry`
+  );
+20:22:46.244869 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.11 seconds
+20:22:46.247136 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:22:46.247280 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_second_dbt_model"} */
+
+    drop view if exists `simpliatransformeddb`.`my_second_dbt_model` cascade
+  
+20:22:46.342214 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:22:46.343197 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:22:46.343329 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_second_dbt_model"} */
+
+    rename table `simpliatransformeddb`.`my_second_dbt_model__dbt_tmp` to `simpliatransformeddb`.`my_second_dbt_model`
+  
+20:22:46.442969 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:22:46.444258 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: COMMIT
+20:22:46.444401 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:22:46.444478 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: COMMIT
+20:22:46.538407 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:22:46.539994 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:22:46.540135 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_second_dbt_model"} */
+drop view if exists `simpliatransformeddb`.`my_second_dbt_model__dbt_backup`
+20:22:46.634734 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:22:46.635961 [debug] [Thread-1  ]: finished collecting timing info
+20:22:46.636145 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: Close
+20:22:46.636614 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '02802d15-8bff-400b-8f34-29f705968c76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc4375a00>]}
+20:22:46.636965 [info ] [Thread-1  ]: 3 of 3 OK created view model simpliatransformeddb.my_second_dbt_model........... [[32mSUCCESS 0[0m in 0.95s]
+20:22:46.637192 [debug] [Thread-1  ]: Finished running node model.mysql_dbt.my_second_dbt_model
+20:22:46.638208 [debug] [MainThread]: Acquiring new mysql connection "master"
+20:22:46.638382 [debug] [MainThread]: Using mysql connection "master"
+20:22:46.638463 [debug] [MainThread]: On master: BEGIN
+20:22:46.638532 [debug] [MainThread]: Opening a new connection, currently in state closed
+20:22:47.077935 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.44 seconds
+20:22:47.078188 [debug] [MainThread]: On master: COMMIT
+20:22:47.078276 [debug] [MainThread]: Using mysql connection "master"
+20:22:47.078352 [debug] [MainThread]: On master: COMMIT
+20:22:47.173284 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.09 seconds
+20:22:47.173526 [debug] [MainThread]: On master: Close
+20:22:47.174004 [info ] [MainThread]: 
+20:22:47.174216 [info ] [MainThread]: Finished running 2 table models, 1 view model in 5.23s.
+20:22:47.174354 [debug] [MainThread]: Connection 'master' was properly closed.
+20:22:47.174436 [debug] [MainThread]: Connection 'model.mysql_dbt.my_second_dbt_model' was properly closed.
+20:22:47.178806 [info ] [MainThread]: 
+20:22:47.178991 [info ] [MainThread]: [32mCompleted successfully[0m
+20:22:47.179163 [info ] [MainThread]: 
+20:22:47.179285 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+20:22:47.179496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc723fd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc5deb100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4bc4375f70>]}
+
+
+============================== 2023-01-05 20:24:11.419833 | b1787249-ce30-4902-85d9-88e457195e2a ==============================
+20:24:11.419833 [info ] [MainThread]: Running with dbt=1.0.8
+20:24:11.420256 [debug] [MainThread]: running dbt with arguments Namespace(record_timing_info=None, debug=None, log_format=None, write_json=None, use_colors=None, printer_width=None, warn_error=None, version_check=None, partial_parse=None, single_threaded=False, use_experimental_parser=None, static_parser=None, profiles_dir='/root/.dbt', send_anonymous_usage_stats=None, fail_fast=None, event_buffer_size=None, project_dir=None, profile=None, target=None, vars='{}', log_cache_events=False, threads=None, select=None, exclude=None, selector_name=None, state=None, defer=None, full_refresh=False, cls=<class 'dbt.task.run.RunTask'>, which='run', rpc_method='run')
+20:24:11.420407 [debug] [MainThread]: Tracking: tracking
+20:24:11.423498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a31ac6b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a31ac6760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a31ac6e80>]}
+20:24:11.447542 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+20:24:11.447697 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+20:24:11.453119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b1787249-ce30-4902-85d9-88e457195e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a319820d0>]}
+20:24:11.458576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b1787249-ce30-4902-85d9-88e457195e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a31a50dc0>]}
+20:24:11.458801 [info ] [MainThread]: Found 3 models, 9 tests, 0 snapshots, 0 analyses, 170 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+20:24:11.460499 [info ] [MainThread]: 
+20:24:11.460884 [debug] [MainThread]: Acquiring new mysql connection "master"
+20:24:11.461748 [debug] [ThreadPool]: Acquiring new mysql connection "list_schemas"
+20:24:11.470011 [debug] [ThreadPool]: Using mysql connection "list_schemas"
+20:24:11.470137 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "connection_name": "list_schemas"} */
+select distinct schema_name
+        from information_schema.schemata
+20:24:11.470223 [debug] [ThreadPool]: Opening a new connection, currently in state init
+20:24:11.909460 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.44 seconds
+20:24:11.910961 [debug] [ThreadPool]: On list_schemas: Close
+20:24:11.912254 [debug] [ThreadPool]: Acquiring new mysql connection "list_None_simpliatransformeddb"
+20:24:11.917140 [debug] [ThreadPool]: Using mysql connection "list_None_simpliatransformeddb"
+20:24:11.917262 [debug] [ThreadPool]: On list_None_simpliatransformeddb: BEGIN
+20:24:11.917340 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+20:24:12.351009 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.43 seconds
+20:24:12.351249 [debug] [ThreadPool]: Using mysql connection "list_None_simpliatransformeddb"
+20:24:12.351338 [debug] [ThreadPool]: On list_None_simpliatransformeddb: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "connection_name": "list_None_simpliatransformeddb"} */
+select
+      null as "database",
+      table_name as name,
+      table_schema as "schema",
+      case when table_type = 'BASE TABLE' then 'table'
+           when table_type = 'VIEW' then 'view'
+           else table_type
+      end as table_type
+    from information_schema.tables
+    where table_schema = 'simpliatransformeddb'
+  
+20:24:12.448820 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.1 seconds
+20:24:12.450194 [debug] [ThreadPool]: On list_None_simpliatransformeddb: ROLLBACK
+20:24:12.498082 [debug] [ThreadPool]: On list_None_simpliatransformeddb: Close
+20:24:12.498876 [debug] [MainThread]: Using mysql connection "master"
+20:24:12.499021 [debug] [MainThread]: On master: BEGIN
+20:24:12.499102 [debug] [MainThread]: Opening a new connection, currently in state init
+20:24:12.924785 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.43 seconds
+20:24:12.925039 [debug] [MainThread]: On master: COMMIT
+20:24:12.925130 [debug] [MainThread]: Using mysql connection "master"
+20:24:12.925207 [debug] [MainThread]: On master: COMMIT
+20:24:13.018211 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.09 seconds
+20:24:13.018445 [debug] [MainThread]: On master: Close
+20:24:13.018921 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+20:24:13.019138 [info ] [MainThread]: 
+20:24:13.022551 [debug] [Thread-1  ]: Began running node model.mysql_dbt.englishcountry
+20:24:13.022831 [info ] [Thread-1  ]: 1 of 3 START table model simpliatransformeddb.englishcountry.................... [RUN]
+20:24:13.023189 [debug] [Thread-1  ]: Acquiring new mysql connection "model.mysql_dbt.englishcountry"
+20:24:13.023306 [debug] [Thread-1  ]: Began compiling node model.mysql_dbt.englishcountry
+20:24:13.023417 [debug] [Thread-1  ]: Compiling model.mysql_dbt.englishcountry
+20:24:13.025841 [debug] [Thread-1  ]: Writing injected SQL for node "model.mysql_dbt.englishcountry"
+20:24:13.026116 [debug] [Thread-1  ]: finished collecting timing info
+20:24:13.026228 [debug] [Thread-1  ]: Began executing node model.mysql_dbt.englishcountry
+20:24:13.050195 [debug] [Thread-1  ]: Writing runtime SQL for node "model.mysql_dbt.englishcountry"
+20:24:13.050512 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:24:13.050615 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: BEGIN
+20:24:13.050688 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+20:24:13.481260 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.43 seconds
+20:24:13.481488 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:24:13.481575 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.englishcountry"} */
+
+
+  create  table
+    `simpliatransformeddb`.`englishcountry__dbt_tmp`
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+select * from (
+
+    select c.code, c.name, c.region, l.language from simpliatransformeddb.airbyte_country c join simpliatransformeddb.airbyte_countrylanguage l on c.code = l.countrycode 
+    where l.language='English' And l.isOfficial='T'
+
+) as source_data
+
+
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  )
+
+20:24:13.671318 [debug] [Thread-1  ]: SQL status: SUCCESS 44 in 0.19 seconds
+20:24:13.677141 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:24:13.677285 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.englishcountry"} */
+
+    drop table if exists `simpliatransformeddb`.`englishcountry` cascade
+  
+20:24:13.772707 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:24:13.773892 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:24:13.774025 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.englishcountry"} */
+
+    rename table `simpliatransformeddb`.`englishcountry__dbt_tmp` to `simpliatransformeddb`.`englishcountry`
+  
+20:24:13.920603 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.15 seconds
+20:24:13.930212 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: COMMIT
+20:24:13.930367 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:24:13.930447 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: COMMIT
+20:24:14.023792 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:24:14.028163 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.englishcountry"
+20:24:14.028305 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.englishcountry"} */
+drop table if exists `simpliatransformeddb`.`englishcountry__dbt_backup`
+20:24:14.122277 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:24:14.123492 [debug] [Thread-1  ]: finished collecting timing info
+20:24:14.123658 [debug] [Thread-1  ]: On model.mysql_dbt.englishcountry: Close
+20:24:14.124146 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b1787249-ce30-4902-85d9-88e457195e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a300853a0>]}
+20:24:14.124461 [info ] [Thread-1  ]: 1 of 3 OK created table model simpliatransformeddb.englishcountry............... [[32mSUCCESS 44[0m in 1.10s]
+20:24:14.124686 [debug] [Thread-1  ]: Finished running node model.mysql_dbt.englishcountry
+20:24:14.124833 [debug] [Thread-1  ]: Began running node model.mysql_dbt.my_first_dbt_model
+20:24:14.125232 [info ] [Thread-1  ]: 2 of 3 START table model simpliatransformeddb.my_first_dbt_model................ [RUN]
+20:24:14.125547 [debug] [Thread-1  ]: Acquiring new mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:24:14.125645 [debug] [Thread-1  ]: Began compiling node model.mysql_dbt.my_first_dbt_model
+20:24:14.125732 [debug] [Thread-1  ]: Compiling model.mysql_dbt.my_first_dbt_model
+20:24:14.127903 [debug] [Thread-1  ]: Writing injected SQL for node "model.mysql_dbt.my_first_dbt_model"
+20:24:14.128184 [debug] [Thread-1  ]: finished collecting timing info
+20:24:14.128289 [debug] [Thread-1  ]: Began executing node model.mysql_dbt.my_first_dbt_model
+20:24:14.130331 [debug] [Thread-1  ]: Writing runtime SQL for node "model.mysql_dbt.my_first_dbt_model"
+20:24:14.130579 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:24:14.130678 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: BEGIN
+20:24:14.130751 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+20:24:14.566727 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.44 seconds
+20:24:14.566965 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:24:14.568563 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_first_dbt_model"} */
+
+
+  create  table
+    `simpliatransformeddb`.`my_first_dbt_model__dbt_tmp`
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  )
+
+20:24:14.749749 [debug] [Thread-1  ]: SQL status: SUCCESS 2 in 0.18 seconds
+20:24:14.751878 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:24:14.752016 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_first_dbt_model"} */
+
+    drop table if exists `simpliatransformeddb`.`my_first_dbt_model` cascade
+  
+20:24:14.849191 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:24:14.851390 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:24:14.851511 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_first_dbt_model"} */
+
+    rename table `simpliatransformeddb`.`my_first_dbt_model__dbt_tmp` to `simpliatransformeddb`.`my_first_dbt_model`
+  
+20:24:14.993077 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.14 seconds
+20:24:14.994544 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: COMMIT
+20:24:14.994691 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:24:14.994768 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: COMMIT
+20:24:15.089260 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:24:15.090753 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_first_dbt_model"
+20:24:15.090890 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_first_dbt_model"} */
+drop table if exists `simpliatransformeddb`.`my_first_dbt_model__dbt_backup`
+20:24:15.187591 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:24:15.216895 [debug] [Thread-1  ]: finished collecting timing info
+20:24:15.217073 [debug] [Thread-1  ]: On model.mysql_dbt.my_first_dbt_model: Close
+20:24:15.217500 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b1787249-ce30-4902-85d9-88e457195e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a300ad0a0>]}
+20:24:15.217780 [info ] [Thread-1  ]: 2 of 3 OK created table model simpliatransformeddb.my_first_dbt_model........... [[32mSUCCESS 2[0m in 1.09s]
+20:24:15.217976 [debug] [Thread-1  ]: Finished running node model.mysql_dbt.my_first_dbt_model
+20:24:15.218087 [debug] [Thread-1  ]: Began running node model.mysql_dbt.my_second_dbt_model
+20:24:15.218328 [info ] [Thread-1  ]: 3 of 3 START view model simpliatransformeddb.my_second_dbt_model................ [RUN]
+20:24:15.218606 [debug] [Thread-1  ]: Acquiring new mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:24:15.218699 [debug] [Thread-1  ]: Began compiling node model.mysql_dbt.my_second_dbt_model
+20:24:15.218779 [debug] [Thread-1  ]: Compiling model.mysql_dbt.my_second_dbt_model
+20:24:15.220592 [debug] [Thread-1  ]: Writing injected SQL for node "model.mysql_dbt.my_second_dbt_model"
+20:24:15.220900 [debug] [Thread-1  ]: finished collecting timing info
+20:24:15.221008 [debug] [Thread-1  ]: Began executing node model.mysql_dbt.my_second_dbt_model
+20:24:15.235568 [debug] [Thread-1  ]: Writing runtime SQL for node "model.mysql_dbt.my_second_dbt_model"
+20:24:15.235829 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:24:15.235925 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: BEGIN
+20:24:15.235996 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+20:24:15.666616 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.43 seconds
+20:24:15.666849 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:24:15.666935 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_second_dbt_model"} */
+
+  create view `simpliatransformeddb`.`my_second_dbt_model__dbt_tmp` as (
+    -- Use the `ref` function to select from other models
+
+select *
+from `simpliatransformeddb`.`englishcountry`
+  );
+20:24:15.766352 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:24:15.768704 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:24:15.768878 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_second_dbt_model"} */
+
+    drop view if exists `simpliatransformeddb`.`my_second_dbt_model` cascade
+  
+20:24:15.863243 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:24:15.864293 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:24:15.864433 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_second_dbt_model"} */
+
+    rename table `simpliatransformeddb`.`my_second_dbt_model__dbt_tmp` to `simpliatransformeddb`.`my_second_dbt_model`
+  
+20:24:15.963432 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.1 seconds
+20:24:15.964704 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: COMMIT
+20:24:15.964863 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:24:15.964944 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: COMMIT
+20:24:16.058513 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:24:16.060123 [debug] [Thread-1  ]: Using mysql connection "model.mysql_dbt.my_second_dbt_model"
+20:24:16.060251 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.0.8", "profile_name": "mysql_dbt", "target_name": "dev", "node_id": "model.mysql_dbt.my_second_dbt_model"} */
+drop view if exists `simpliatransformeddb`.`my_second_dbt_model__dbt_backup`
+20:24:16.154710 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.09 seconds
+20:24:16.155929 [debug] [Thread-1  ]: finished collecting timing info
+20:24:16.156111 [debug] [Thread-1  ]: On model.mysql_dbt.my_second_dbt_model: Close
+20:24:16.156584 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b1787249-ce30-4902-85d9-88e457195e2a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a32ef76d0>]}
+20:24:16.156931 [info ] [Thread-1  ]: 3 of 3 OK created view model simpliatransformeddb.my_second_dbt_model........... [[32mSUCCESS 0[0m in 0.94s]
+20:24:16.157152 [debug] [Thread-1  ]: Finished running node model.mysql_dbt.my_second_dbt_model
+20:24:16.158150 [debug] [MainThread]: Acquiring new mysql connection "master"
+20:24:16.158328 [debug] [MainThread]: Using mysql connection "master"
+20:24:16.158410 [debug] [MainThread]: On master: BEGIN
+20:24:16.158482 [debug] [MainThread]: Opening a new connection, currently in state closed
+20:24:16.584705 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.43 seconds
+20:24:16.584962 [debug] [MainThread]: On master: COMMIT
+20:24:16.585053 [debug] [MainThread]: Using mysql connection "master"
+20:24:16.585128 [debug] [MainThread]: On master: COMMIT
+20:24:16.677635 [debug] [MainThread]: SQL status: SUCCESS 0 in 0.09 seconds
+20:24:16.677880 [debug] [MainThread]: On master: Close
+20:24:16.678364 [info ] [MainThread]: 
+20:24:16.678576 [info ] [MainThread]: Finished running 2 table models, 1 view model in 5.22s.
+20:24:16.678715 [debug] [MainThread]: Connection 'master' was properly closed.
+20:24:16.678786 [debug] [MainThread]: Connection 'model.mysql_dbt.my_second_dbt_model' was properly closed.
+20:24:16.682979 [info ] [MainThread]: 
+20:24:16.683169 [info ] [MainThread]: [32mCompleted successfully[0m
+20:24:16.683341 [info ] [MainThread]: 
+20:24:16.683463 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+20:24:16.683670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a31923eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a31923fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6a319236d0>]}
